@@ -1,0 +1,8 @@
+{
+    "disableAutoUpdate": false,
+    "options": {
+        "niceName": "SDmgNumbs"
+    },
+    "servers": ["https://raw.githubusercontent.com/Leyki/tera-short-dmg-numbers/commits/master"],
+    "supportUrl": "https://discord.gg/dUNDDtw"
+}
