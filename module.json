@@ -3,6 +3,6 @@
     "options": {
         "niceName": "SDmgNumbs"
     },
-    "servers": ["https://raw.githubusercontent.com/Leyki/tera-short-dmg-numbers/commits/master"],
+    "servers": ["https://raw.githubusercontent.com/Leyki/tera-short-dmg-numbers/master/"],
     "supportUrl": "https://discord.gg/dUNDDtw"
 }
