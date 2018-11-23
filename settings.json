@@ -1,4 +1,7 @@
 {
- "enabled": true,
- "divisor": 10000
+    "version": 1,
+    "data": {
+        "enabled": true,
+        "divisor": "10000"
+    }
 }

@@ -4,6 +4,8 @@ It basically divides the damage you deal by the value set in the script, by the 
 
 #### In-game Commands
 
-* ***`smn`***  *`[on/off]`* turns on and off the whole module functionalities.
+* ***`/!smn`***  *`[on/off]`* turns on and off the whole module functionalities.
 ######
-* ***`smn`*** *`divisor` `new divisor value(number)`* sets a new damage divisor.
+* ***`/!smn`*** *`divisor` `new divisor value(number)`* sets a new damage divisor.
+
+*Note: Settings will autosave if using Caali's proxy when exitting the game. I have no idea why it's broken with pony's proxy, will probably fix it later /shrug.*

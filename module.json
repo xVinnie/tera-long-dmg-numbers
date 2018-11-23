@@ -1,7 +1,10 @@
 {
-    "disableAutoUpdate": false,
+    "disableAutoUpdate": true,
     "options": {
-        "niceName": "SDmgNumbs"
+        "niceName": "SDmgNumbs",
+        "settingsVersion": 1,
+        "settingsFile": "settings.json",
+        "settingsMigrator": "settings_migrator.js"
     },
     "servers": ["https://raw.githubusercontent.com/Leyki/tera-short-dmg-numbers/master/"],
     "supportUrl": "https://discord.gg/dUNDDtw"

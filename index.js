@@ -1,7 +1,8 @@
 module.exports = function ZelekieShortDmgNumbers(mod) {
 
+  const notCaali = mod.proxyAuthor !== 'caali'
   // Ponku told me to put this here
-  if (mod.proxyAuthor !== 'caali') {
+  if (notCaali) {
     const options = require('./module').options
     if (options) {
       const settingsVersion = options.settingsVersion
@@ -12,34 +13,38 @@ module.exports = function ZelekieShortDmgNumbers(mod) {
     }
   }
 
-  const dmgType = 1,
-    settings = require(`./settings.json`)
+  const dmgType = 1 // We assume other dmg types are irrelevant, might not be true.
 
+  // GameId for ponku's broxy
+  let me = null
+  mod.hook('S_LOGIN', 10, event => { me = event.gameId })
+
+  // Hook packet responsible for dmg, check wherever it's relative to us, modify it if so
   mod.hook('S_EACH_SKILL_RESULT', 12, event => {
-    if (settings.enabled && (mod.game.me.is(event.source) || mod.game.me.is(event.owner)) && event.type == dmgType) {
-      event.damage = Math.round(event.damage / settings.divisor)
+    if (!mod.settings.enabled) return
+    if ((notCaali ? (me === event.source || me === event.owner) : (mod.game.me.is(event.source)) || mod.game.me.is(event.owner)) && event.type == dmgType) {
+      event.damage = (notCaali ? event.damage / BigInt(mod.settings.divisor) : Math.round(event.damage / mod.settings.divisor))
       return true
     }
   })
 
+  // Bunch of useless commands
   mod.command.add('smn', {
     on() {
-      if (!settings.enabled) {
-        settings.enabled = true
-        mod.command.message('Module enabled.')
-      }
-      else mod.command.message('Fool, i was already enabled!')
+      if (mod.settings.enabled) return mod.command.message('Fool, i was already enabled!')
+      mod.settings.enabled = true
+      mod.command.message('Module enabled.')
     },
     off() {
-      if (settings.enabled) {
-        settings.enabled = false
-        mod.command.message('Module disabled.')
-      }
-      else mod.command.message('Fool, i was already disabled!')
+      if (!mod.settings.enabled) return mod.command.message('Fool, i was already disabled!')
+      mod.settings.enabled = false
+      mod.command.message('Module disabled.')
     },
     divisor(NewValue) {
-      settings.divisor = NewValue
-      mod.command.message('New settings.divisor set to: ' + settings.divisor + '.')
-    }
+      if (!+NewValue) return mod.command.message('Innapropiate or missing divisor value.')
+      mod.settings.divisor = NewValue
+      mod.command.message('Divisor set to: ' + mod.settings.divisor + '.')
+    },
+    $default() { mod.command.message('Invalid command.') }
   })
 }
