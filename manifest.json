@@ -2,7 +2,7 @@
 	"files": {
 		"index.js": "a6e315ff7a714409a8228f92547c406c4037bdd41529578ddbac588f039fb9b1",
 		"README.md": "8730a14ead83bcb5ce104a8916c20ccbacd30e2cf14bc77bd5000991e0c5ac1a",
-		"settings_migrator.js": "49b3fe1e3feeb644b4190d8ba29c130c9441b8bd589df1a50a7fe027ee935fba",
+		"settings_migrator.js": "49b3fe1e3feeb644b4190d8ba29c130c9441b8bd589df1a50a7fe027ee935fba"
 	},
 	"defs": {
 		"S_LOGIN": 10,
