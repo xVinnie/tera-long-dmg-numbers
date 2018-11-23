@@ -8,4 +8,4 @@ It basically divides the damage you deal by the value set in the script, by the 
 ######
 * ***`/!smn`*** *`divisor` `new divisor value(number)`* sets a new damage divisor.
 
-*Note: Settings will autosave if using Caali's proxy when exitting the game. I have no idea why it's broken with pony's proxy, will probably fix it later /shrug.*
+*Note: Settings will be autosaved if using Caali's proxy when exitting the game. I have no idea why it's broken with pony's proxy, will probably fix it later /shrug.*
