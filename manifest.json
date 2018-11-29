@@ -1,9 +1,9 @@
 {
 	"files": {
-		"index.js": "a6e315ff7a714409a8228f92547c406c4037bdd41529578ddbac588f039fb9b1",
+		"index.js": "3b578983d9da38ce1e1ff1f424ca15be9faee66a5c5aa9efebdbcd64436716ec",
 		"README.md": "8730a14ead83bcb5ce104a8916c20ccbacd30e2cf14bc77bd5000991e0c5ac1a",
 		"settings_migrator.js": "49b3fe1e3feeb644b4190d8ba29c130c9441b8bd589df1a50a7fe027ee935fba",
-		"module.json": "2f9946eb25f90fbcf6c4c4469cc5ba9b35fb82daa6a4f71a89a5f01581294650"
+		"module.json": "57ae358ae380482728c41aff240af3a521dd813e420aa4c2d37a5ac4d2cb59fb"
 	},
 	"defs": {
 		"S_LOGIN": 10,

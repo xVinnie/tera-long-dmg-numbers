@@ -1,8 +1,7 @@
 module.exports = function ZelekieShortDmgNumbers(mod) {
 
-  const notCaali = mod.proxyAuthor !== 'caali'
   // Ponku told me to put this here
-  if (notCaali) {
+  if (mod.proxyAuthor !== 'caali') {
     const options = require('./module').options
     if (options) {
       const settingsVersion = options.settingsVersion
@@ -17,13 +16,13 @@ module.exports = function ZelekieShortDmgNumbers(mod) {
 
   // GameId for ponku's broxy
   let me = null
-  mod.hook('S_LOGIN', 10, event => { me = event.gameId })
+  mod.hook('S_LOGIN', 10, event => { me = event.gameId }) // if notCaali ==>...
 
   // Hook packet responsible for dmg, check wherever it's relative to us, modify it if so
   mod.hook('S_EACH_SKILL_RESULT', 12, event => {
     if (!mod.settings.enabled) return
-    if ((notCaali ? (me === event.source || me === event.owner) : (mod.game.me.is(event.source)) || mod.game.me.is(event.owner)) && event.type == dmgType) {
-      event.damage = (notCaali ? event.damage / BigInt(mod.settings.divisor) : Math.round(event.damage / mod.settings.divisor))
+    if ((me === event.source || me === event.owner) && event.type === dmgType) {
+      event.damage = event.damage / BigInt(mod.settings.divisor)
       return true
     }
   })
