@@ -3,7 +3,7 @@
 		"index.js": "3b578983d9da38ce1e1ff1f424ca15be9faee66a5c5aa9efebdbcd64436716ec",
 		"README.md": "8730a14ead83bcb5ce104a8916c20ccbacd30e2cf14bc77bd5000991e0c5ac1a",
 		"settings_migrator.js": "49b3fe1e3feeb644b4190d8ba29c130c9441b8bd589df1a50a7fe027ee935fba",
-		"module.json": "57ae358ae380482728c41aff240af3a521dd813e420aa4c2d37a5ac4d2cb59fb"
+		"module.json": "3c06e78b3ae4f5d4ea471f24a04725a1fd3e4b91ab3cca5543627d8871a77059"
 	},
 	"defs": {
 		"S_LOGIN": 10,

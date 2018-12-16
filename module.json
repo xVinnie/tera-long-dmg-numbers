@@ -1,5 +1,10 @@
 {
     "disableAutoUpdate": false,
+    "disabled": false,
+    "name": "Short Damage Numbers",
+    "author": "Leyki",
+    "version": 1.0,
+    "description": "Shortens the visually seen damage dealt number through a complex mathematical operator called division! How small it's up to you.",
     "options": {
         "niceName": "SDmgNumbs",
         "settingsVersion": 1,
@@ -7,5 +12,6 @@
         "settingsMigrator": "settings_migrator.js"
     },
     "servers": ["https://raw.githubusercontent.com/Leyki/tera-short-dmg-numbers/master/"],
+    "donationUrl": "https://Leyki_VK_NA",
     "supportUrl": "https://discord.gg/dUNDDtw"
 }
