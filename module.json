@@ -6,7 +6,8 @@
     "version": 1.0,
     "description": "Shortens the visually seen damage dealt number through a complex mathematical operator called division! How small it's up to you.",
     "options": {
-        "niceName": "SDmgNumbs",
+        "niceName": "SDmgNums",
+        "guiName": "Short Damage Numbers",
         "settingsVersion": 1,
         "settingsFile": "settings.json",
         "settingsMigrator": "settings_migrator.js"
