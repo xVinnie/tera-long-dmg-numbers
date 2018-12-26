@@ -13,6 +13,5 @@
         "settingsMigrator": "settings_migrator.js"
     },
     "servers": ["https://raw.githubusercontent.com/Leyki/tera-short-dmg-numbers/master/"],
-    "donationUrl": "https://Leyki_VK_NA",
-    "supportUrl": "https://discord.gg/dUNDDtw"
+    "donationUrl": "https://Leyki_VK_NA"
 }
