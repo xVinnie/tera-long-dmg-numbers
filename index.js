@@ -1,4 +1,4 @@
-module.exports = function ZelekieShortDmgNumbers(mod) {
+module.exports = function ZelekieLongDmgNumbers(mod) {
 
   // Ponku told me to put this here
   if (mod.proxyAuthor !== 'caali') {
@@ -22,13 +22,13 @@ module.exports = function ZelekieShortDmgNumbers(mod) {
   mod.hook('S_EACH_SKILL_RESULT', 12, event => {
     if (!mod.settings.enabled) return
     if ((me === event.source || me === event.owner) && event.type === dmgType) {
-      event.damage = event.damage / BigInt(mod.settings.divisor)
+      event.damage = event.damage / BigInt(mod.settings.multiplier)
       return true
     }
   })
 
   // Bunch of useless commands
-  mod.command.add('smn', {
+  mod.command.add('lmn', {
     on() {
       if (mod.settings.enabled) return mod.command.message('Fool, i was already enabled!')
       mod.settings.enabled = true
@@ -39,10 +39,10 @@ module.exports = function ZelekieShortDmgNumbers(mod) {
       mod.settings.enabled = false
       mod.command.message('Module disabled.')
     },
-    divisor(NewValue) {
-      if (!+NewValue) return mod.command.message('Innapropiate or missing divisor value.')
-      mod.settings.divisor = NewValue
-      mod.command.message('Divisor set to: ' + mod.settings.divisor + '.')
+    multiplier(NewValue) {
+      if (!+NewValue) return mod.command.message('Innapropiate or missing multiplier value.')
+      mod.settings.multiplier = NewValue
+      mod.command.message('Multiplier set to: ' + mod.settings.multiplier + '.')
     },
     $default() { mod.command.message('Invalid command.') }
   })
