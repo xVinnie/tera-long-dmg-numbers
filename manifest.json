@@ -1,10 +1,5 @@
 {
-	"files": {
-		"index.js": "3b578983d9da38ce1e1ff1f424ca15be9faee66a5c5aa9efebdbcd64436716ec",
-		"README.md": "8730a14ead83bcb5ce104a8916c20ccbacd30e2cf14bc77bd5000991e0c5ac1a",
-		"settings_migrator.js": "49b3fe1e3feeb644b4190d8ba29c130c9441b8bd589df1a50a7fe027ee935fba",
-		"module.json": "f18cf86f8bb09f638b3ee48d2186417821e67041d493adaf256c31e3d35c12cb"
-	},
+	
 	"defs": {
 		"S_LOGIN": 10,
 		"S_EACH_SKILL_RESULT": 12
