@@ -12,6 +12,6 @@
         "settingsFile": "settings.json",
         "settingsMigrator": "settings_migrator.js"
     },
-    "servers": ["https://raw.githubusercontent.com/Leyki/tera-short-dmg-numbers/master/"],
-    "donationUrl": ""
+    "servers": ["https://raw.githubusercontent.com/xVinnie/tera-long-dmg-numbers/master/"],
+    "donationUrl": "www.google.com"
 }
