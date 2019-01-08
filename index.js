@@ -22,7 +22,7 @@ module.exports = function ZelekieLongDmgNumbers(mod) {
   mod.hook('S_EACH_SKILL_RESULT', 12, event => {
     if (!mod.settings.enabled) return
     if ((me === event.source || me === event.owner) && event.type === dmgType) {
-      event.damage = event.damage / BigInt(mod.settings.multiplier)
+      event.damage = event.damage * BigInt(mod.settings.multiplier)
       return true
     }
   })
